@@ -1,0 +1,113 @@
+/*************************
+
+This code was built for the Square theme we are developing for the Responsive
+Wordpress Theme series. 
+
+Follow the series at http://www.youtube.com/AwfulMedia
+
+*************************/
+
+///////  This is the CSS for the slider - this goes into your main stylesheet.
+|||||||  
+\\\\\\\  We add more to this in the video!
+
+-----------------------------------------------------------------------------------------------------------------
+
+.featured-game{
+	position: relative;
+	z-index: 1;
+	font-family: sans-serif;
+}
+.featured-game .caption {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	bottom: 15px;
+	padding: 10px;
+	color: #fff;
+	width: 40%;
+	background: #000;
+	opacity: .6;
+	line-height: 18px;
+	font-size: 14px;
+	z-index: 2;
+}
+.featured-game .game-title {
+	font-size: 22px;
+	font-weight: 600;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 10px;
+}
+.featured-game a:visited {
+	color: #fff;
+}
+.featured-game .playnow {
+	text-align: center;
+	text-decoration: none;
+	background: #56C928;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 10px;
+}
+@media only screen and (max-width: 767px) {
+	.featured-game .caption {
+		width: 85%;
+		opacity: .70;
+	}	
+}
+@media only screen and (max-width: 479px){
+	.featured-game p {
+		display: none;
+	}	
+}
+
+///////  This is the HTML for the slider. This will be placed in index.php for now.
+|||||||  
+\\\\\\\  Again, follow along in the video!
+
+-----------------------------------------------------------------------------------------------------------------
+
+<section class="eleven columns row">
+  <div class="flexslider">
+	<ul class="slides">
+		
+		<?php
+		query_posts(array('category_name' => 'Featured', 'posts_per_page' => 3));
+		if(have_posts()) : while(have_posts()) : the_post();
+		?>
+	
+		  <li class="featured-game">
+			<?php the_post_thumbnail(); ?>
+			<div class="caption">
+				<a href="#" class="game-title"><?php the_title();?></a>
+				<?php the_excerpt(); ?>
+				<a href="#" class="playnow">Play Now</a>
+			</div>
+		  </li>
+	  
+		<?php
+		    endwhile;
+			endif;
+			wp_reset_query();
+		?>
+	</ul>
+  </div>
+</section>
+
+///////  The following script will be placed in the footer.php.
+|||||||  
+\\\\\\\  Again, follow along in the video!
+
+-----------------------------------------------------------------------------------------------------------------
+
+<script type="text/javascript" src="<?php bloginfo( 'template_url' );?>/js/jquery.flexslider.js" ></script>
+<script type="text/javascript">
+	// Can also be used with $(document).ready()
+	jQuery(window).load(function() {
+	  jQuery('.flexslider').flexslider({
+		animation: "slide"
+	  });
+	});
+</script>

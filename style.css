@@ -1,0 +1,137 @@
+/*
+Theme Name: Mit første responsive wordpress theme
+Theme URI: https://nichlasdam.dk
+Description: Mit første wordpress tema, kodet fra bunden
+Author: Nichlas Dam
+Author URI: https://nichlasdam.dk
+Version: 1.0
+Tags: white, basic, clean, responsive
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.nav-bar {
+	background: #5ca5cc;
+	height: 50px;
+	box-shadow: 2px 2px 0 #b5b5b5;
+}
+.main-nav ul, .main-nav li {
+	display: inline;
+}
+.main-nav a {
+	padding: 0 20px 0 20px;
+	text-decoration: none;
+	line-height: 50px;
+	display: block;
+	color: #fff;
+	font-family: sans-serif;
+}
+.main-nav a:hover {
+	background: #4e91b5;
+}
+.main-nav ul ul a {
+	width: 135px;
+	line-height: 40px;
+	padding: 0 20px;
+	display: block;
+}
+.main-nav ul li {
+	position: relative;
+	float: left;
+}
+
+.main-nav ul ul {
+	position: absolute;
+	top: -9999999px;
+	left: 0;
+	opacity: 0;
+	background: #5ca5cc;
+	text-align: left;
+	box-shadow: 2px 2px 0 #b5b5b5;
+}
+.main-nav ul li:hover > ul {
+	position: absolute;
+	top: 100%;
+	opacity: 1;
+}
+#show-nav {
+	display: none;
+	background: #5ca5cc;
+}
+#close-nav {
+	display: none;
+	background: #5ca5cc;
+	text-align: right;
+	font-family: sans-serif;
+	box-shadow: 2px 2px 0 #b5b5b5;
+}
+@media only screen and (max-width: 767px) {
+	.main-nav ul ul {
+		position: relative;
+		top: 0;
+	}
+	.main-nav ul li:hover > ul {
+		position: relative;
+	}
+	.main-nav ul ul a {
+		padding: 0 20px 0 40px;
+		width: auto;
+		line-height: 50px;
+	}
+	.main-nav ul li {
+		float: none;
+	}
+	.main-nav {
+		display: none;
+	}
+	#show-nav {
+		display: block;
+	}
+	.nav-bar { 
+		height: inherit; 
+	} 
+
+}
