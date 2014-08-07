@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-<?php the_post_thumbnail ( 'featured' ); ?>
-<?php the_post_thumbnail ( 'post-thumb' ); ?>
 <section class="eleven columns row">
   <div class="flexslider">
 	<ul class="slides">
@@ -11,7 +9,7 @@
 		?>
 	
 		  <li class="featured-game">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail( 'medium'); ?>
 			<div class="caption">
 				<a href="#" class="game-title"><?php the_title();?></a>
 				<?php the_excerpt(); ?>
@@ -26,6 +24,7 @@
 		?>
 	</ul>
   </div>
+    </div>
 </section>
 <?php get_sidebar();?>	
 <?php get_footer();?>	

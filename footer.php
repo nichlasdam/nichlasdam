@@ -6,7 +6,8 @@
 		animation: "slide"
 	       });
 	       });
-
+        </script>
+        <script>    
 			jQuery("#show-nav").click(function () {
 				jQuery(".main-nav").toggle("slow");
 				jQuery("#close-nav").show("slow");
@@ -15,6 +16,6 @@
 				jQuery(".main-nav").toggle("slow");
 				jQuery("#close-nav").hide("slow");
 			});
-    </script>
+        </script>
 	</body>
 </html>

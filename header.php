@@ -8,6 +8,7 @@
 			?>
 		</title>
 		<?php wp_enqueue_script ("jquery"); ?>
+        <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/flexslider.css"/>
 		<?php wp_head();?>
 	</head>
 	<body>
@@ -26,6 +27,6 @@
 					<?php wp_nav_menu( array( 'container_class' => 'main-nav', 'container' => 'nav' )); ?>
 				</div>
 			</header>
-		</div>
+            
 	</body>
 </html>
