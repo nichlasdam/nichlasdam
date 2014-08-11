@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -56,7 +57,6 @@ table {
 .nav-bar {
 	background: #5ca5cc;
 	height: 50px;
-	box-shadow: 2px 2px 0 #b5b5b5;
 }
 .main-nav ul, .main-nav li {
 	display: inline;
@@ -146,6 +146,58 @@ table {
 	right: 10px;
 	padding: 10px;
 }
+.internal-x {
+    background: #e3e3e3;
+    display: block;
+    margin-top: 10px;
+    height: 250px;
+}
+.new-games h1 {
+    background: #5ca5cc;
+    font-size: 1.7em;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+.new-games .game-thumb {
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
+    vertical-align: top;
+    padding-right: 5px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #4b4b4b;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+    list-style-type: none;
+    border-left: 3px solid transparent;
+}
+.game-thumb img {
+    float: left;
+    margin-right: 10px;
+}
+.game-thumb:hover {
+    background: #eee; 
+    border-left: 5px solid #56C928;
+}
+.game-thumb p {
+    color: #4b4b4b;
+    text-decoration: none;
+    font-weight: normal;
+}
+.game-thumb a {
+    color: #4b4b4b;
+    text-decoration: none;
+    display: block;
+    height: 75px;
+}
+.game-thumb div {
+   margin-top: 5px; 
+}
 @media only screen and (max-width: 767px) {
 	.featured-game .caption {
 		width: 85%;
@@ -181,6 +233,10 @@ table {
 	}
 	.nav-bar { 
 		height: inherit; 
-	} 
+	}
+    .new-games .game-thumb {
+    float: none;
+    width: 100%;
+}
 
 }

@@ -7,6 +7,7 @@
 				bloginfo( 'name' );
 			?>
 		</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php wp_enqueue_script ("jquery"); ?>
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/flexslider.css"/>
 		<?php wp_head();?>
