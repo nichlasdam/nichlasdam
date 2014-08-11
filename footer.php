@@ -1,4 +1,9 @@
-		</div>
+    <footer class="sixteen columns row">
+        <div class="container">
+        <?php dynamic_sidebar('footer-widgets'); ?>
+        </div>
+    </footer>
+</div>
         <script type="text/javascript" src="<?php bloginfo( 'template_url' );?>/js/jquery.flexslider.js" ></script>
         <script type="text/javascript">
 	   jQuery(window).load(function() {
